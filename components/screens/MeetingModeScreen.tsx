@@ -12,8 +12,8 @@ export function MeetingModeScreen() {
   return (
     <div className="flex h-full flex-col px-4 py-4">
       <ScreenTitle>Meeting Mode</ScreenTitle>
-      <div className="mt-5 flex flex-1 flex-col gap-3">
-        <div className="flex min-h-16 items-center justify-between rounded-xl bg-white/10 px-3">
+      <div className="mt-5 flex flex-1 flex-col gap-2.5">
+        <div className="flex min-h-14 items-center justify-between rounded-xl bg-white/10 px-3">
           <span className="max-w-[120px] text-[13px] font-semibold leading-snug">
             Voice Clarity
           </span>
@@ -26,10 +26,10 @@ export function MeetingModeScreen() {
         <div className="rounded-xl bg-white/10 px-3 py-3">
           <div className="flex items-center justify-between">
             <span className="text-[13px] font-semibold">ANC</span>
-            <span className="text-[12px] font-bold text-amber-400">Medium</span>
+            <span className="text-[12px] font-bold text-blue-400">Medium</span>
           </div>
         </div>
-        <div className="flex min-h-16 items-center justify-between rounded-xl bg-white/10 px-3">
+        <div className="flex min-h-14 items-center justify-between rounded-xl bg-white/10 px-3">
           <span className="max-w-[130px] text-[13px] font-semibold leading-snug">
             Keyboard Noise Reduction
           </span>

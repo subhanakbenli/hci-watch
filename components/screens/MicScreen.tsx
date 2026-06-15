@@ -13,24 +13,21 @@ export function MicScreen() {
       <div
         className={`mt-7 flex h-32 w-32 items-center justify-center rounded-full border-2 ${
           muted
-            ? "border-red-500 bg-red-500/14 shadow-[0_0_30px_rgba(239,68,68,0.34)]"
-            : "border-emerald-500 bg-emerald-500/14 shadow-[0_0_30px_rgba(16,185,129,0.34)]"
+            ? "border-white/25 bg-white/8 shadow-[0_0_30px_rgba(255,255,255,0.12)]"
+            : "border-blue-500 bg-blue-500/15 shadow-[0_0_32px_rgba(37,99,235,0.45)]"
         }`}
       >
-        <Icon size={72} className={muted ? "text-red-100" : "text-emerald-100"} />
+        <Icon size={72} className={muted ? "text-white/65" : "text-blue-100"} />
       </div>
       <p
         className={`mt-6 text-[17px] font-semibold ${
-          muted ? "text-red-300" : "text-emerald-300"
+          muted ? "text-white/75" : "text-white"
         }`}
       >
-        {muted ? "Muted" : "Mic Active"}
+        {muted ? "Muted" : "Microphone Active"}
       </p>
       <div className="mt-auto mb-5 w-full">
-        <PrimaryButton
-          tone={muted ? "green" : "red"}
-          onClick={() => setMuted((value) => !value)}
-        >
+        <PrimaryButton onClick={() => setMuted((value) => !value)}>
           {muted ? "UNMUTE" : "MUTE"}
         </PrimaryButton>
       </div>

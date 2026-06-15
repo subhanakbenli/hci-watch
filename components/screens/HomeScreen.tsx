@@ -22,7 +22,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     { label: "Mute", icon: Mic, target: "mic" },
     { label: "ANC", icon: Volume2, target: "noise" },
     { label: "Translate", icon: Languages, target: "translation" },
-    { label: "Bluetooth", icon: Bluetooth, target: "settings" },
+    { label: "Bluetooth", icon: Bluetooth, target: "bluetooth" },
     { label: "Settings", icon: Settings, target: "settings" },
   ];
 
@@ -52,7 +52,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           >
             <action.icon
               size={25}
-              className={action.label === "Meeting" ? "text-amber-300" : "text-white/85"}
+              className={action.label === "Meeting" ? "text-blue-400" : "text-white/85"}
             />
           </button>
         ))}

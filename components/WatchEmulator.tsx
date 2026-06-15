@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BatteryScreen } from "@/components/screens/BatteryScreen";
+import { ConnectionScreen } from "@/components/screens/ConnectionScreen";
 import { DeviceStatusScreen } from "@/components/screens/DeviceStatusScreen";
 import { HomeScreen } from "@/components/screens/HomeScreen";
 import { IncomingCallScreen } from "@/components/screens/IncomingCallScreen";
@@ -21,6 +22,8 @@ type ScreenId =
   | "call"
   | "status"
   | "battery"
+  | "connection"
+  | "bluetooth"
   | "settings";
 
 type Screen = {
@@ -37,6 +40,8 @@ const screens: Screen[] = [
   { id: "call", label: "Call" },
   { id: "status", label: "Status" },
   { id: "battery", label: "Battery" },
+  { id: "connection", label: "Connection" },
+  { id: "bluetooth", label: "Bluetooth" },
   { id: "settings", label: "Settings" },
 ];
 
@@ -49,6 +54,8 @@ const quickFlow: ScreenId[] = [
   "call",
   "status",
   "battery",
+  "connection",
+  "bluetooth",
   "settings",
 ];
 
@@ -131,8 +138,12 @@ export function WatchEmulator() {
         return <DeviceStatusScreen />;
       case "battery":
         return <BatteryScreen />;
+      case "connection":
+        return <ConnectionScreen />;
+      case "bluetooth":
+        return <SettingsBluetoothScreen mode="bluetooth" />;
       case "settings":
-        return <SettingsBluetoothScreen />;
+        return <SettingsBluetoothScreen mode="settings" />;
       default:
         return null;
     }

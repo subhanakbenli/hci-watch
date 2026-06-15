@@ -23,14 +23,14 @@ export function MenuRow({
       onClick={onClick}
       className={`flex min-h-12 w-full items-center gap-3 rounded-xl border px-3 text-left transition ${
         active
-          ? "border-amber-500 bg-amber-500/12"
+          ? "border-blue-500 bg-blue-500/12"
           : "border-white/8 bg-white/10 hover:bg-white/14"
       }`}
     >
       {Icon && (
         <Icon
           size={21}
-          className={active ? "shrink-0 text-amber-400" : "shrink-0 text-white/70"}
+          className={active ? "shrink-0 text-blue-400" : "shrink-0 text-white/70"}
         />
       )}
       <span className="min-w-0 flex-1">
@@ -44,7 +44,7 @@ export function MenuRow({
         )}
       </span>
       {rightText && (
-        <span className="text-[11px] font-semibold text-amber-400">{rightText}</span>
+        <span className="text-[11px] font-semibold text-blue-400">{rightText}</span>
       )}
       <ChevronRight size={17} className="shrink-0 text-white/45" />
     </button>

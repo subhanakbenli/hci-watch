@@ -18,7 +18,7 @@ export function IncomingCallScreen() {
             Answer
           </span>
         </PrimaryButton>
-        <PrimaryButton tone="red">
+        <PrimaryButton>
           <span className="inline-flex items-center justify-center gap-2">
             <X size={18} />
             Reject

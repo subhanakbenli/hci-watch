@@ -12,7 +12,7 @@ export function ToggleSwitch({ checked, onClick, label }: ToggleSwitchProps) {
       aria-pressed={checked}
       onClick={onClick}
       className={`relative h-7 w-12 rounded-full p-1 transition ${
-        checked ? "bg-amber-500" : "bg-white/20"
+        checked ? "bg-blue-500" : "bg-white/20"
       }`}
     >
       <span
